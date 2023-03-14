@@ -17,5 +17,5 @@ public class User {
     // Metodos o funciones
     public String getUsuario(){
         return Usuario;
-    }
+    } 
 }
