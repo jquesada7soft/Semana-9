@@ -14,6 +14,8 @@ public class EjercicioArrayList {
         initArray();
         // Imprimimos las personas 
         printArray();
+
+        searchPerson("1");
     }
 
     public void initArray() {
@@ -32,6 +34,17 @@ public class EjercicioArrayList {
 
         for (int index = 0; _vlSize > index; index++) {
             System.out.println(_vgArrayPersonas.get(index));
+        }
+    }
+
+    public void searchPerson(String identificacion ){
+
+        int _vlSize = _vgArrayPersonas.size();
+
+        for (int index = 0; _vlSize > index; index++) {
+            if(_vgArrayPersonas.get(index).getIdentificacion().equals(identificacion)){
+                System.out.println(_vgArrayPersonas.get(index));
+            }
         }
     }
 
