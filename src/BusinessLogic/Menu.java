@@ -1,14 +1,17 @@
 package BusinessLogic;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 import Common.Account;
+import Common.Transaction;
 import Common.User;
 
 public class Menu {
 
     // Variable global.
+    private ArrayList<Transaction> _vgTransactionLog = new ArrayList<Transaction>();
 
     // Esta variable de tipo arreglo de la clase de usuario tiene un tama;o de 2.
     public User[] _arregloUsuarioSistemas = new User[2];
@@ -156,6 +159,15 @@ public class Menu {
 
     public void VerCuentas() {
 
+        // Crear la transaccion y se guarda en el arraylist
+        Transaction vlTransactionViewAccount = new Transaction();
+        vlTransactionViewAccount.setAmount(0.00);
+        vlTransactionViewAccount.setTransactionType("Consulta de cuentas");
+        vlTransactionViewAccount.setOriginAccount("");
+        vlTransactionViewAccount.setDestinationAccount("");
+        vlTransactionViewAccount.setTransactionDate(new Date());
+        _vgTransactionLog.add(vlTransactionViewAccount);
+
         // Obtenemos de las cuentas del usuario y las asignamos a una variable para
         // recorrerlas.
         ArrayList<Account> cuentasDelUsuario = _usuarioQueInicioSesion.getArregloCuentas();
@@ -180,7 +192,8 @@ public class Menu {
         for (int indice = 0; _usuarioQueInicioSesion.getArregloCuentas().size() > indice; indice++) {
             if (_usuarioQueInicioSesion.getArregloCuentas().get(indice).AccountNumber.equals(NumeroCuenta)) {
 
-                System.out.println("Saldo anterior: " + _usuarioQueInicioSesion.getArregloCuentas().get(indice).Balance);
+                System.out
+                        .println("Saldo anterior: " + _usuarioQueInicioSesion.getArregloCuentas().get(indice).Balance);
                 _usuarioQueInicioSesion.getArregloCuentas()
                         .get(indice).Balance = _usuarioQueInicioSesion.getArregloCuentas().get(indice).Balance
                                 + MontoDepositar;

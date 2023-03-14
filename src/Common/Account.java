@@ -5,6 +5,7 @@ public class Account {
     public String AccountNumber;
     public Double Balance;
     public String Coin; // Dolares o Colones.
+    public Bank Bank;
 
     public Account() {
         Type = "";

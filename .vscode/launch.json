@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CashierJFrame",
+            "request": "launch",
+            "mainClass": "CashierJFrame",
+            "projectName": "Proyecto Final_417e7df1"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
