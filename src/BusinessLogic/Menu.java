@@ -111,6 +111,8 @@ public class Menu {
             System.out.println("Sistema de Auth de usuarios");
             System.out.println("1. Ver mis cuentas!");
             System.out.println("2. Deposito a mis cuentas!");
+            System.out.println("3. Retiro a mis cuentas!");
+            System.out.println("4. Transferencia entre mis cuentas!");
             System.out.println("0. Salir");
             System.out.println("Elija una de las opciones del menu");
 
@@ -206,5 +208,21 @@ public class Menu {
         System.out.println("El # de cuenta es incorrecto!");
 
         // entrada.close();
+    }
+
+    public void TransferenciasEntrecuentasPropiar(
+        String NumeroCuentaOrigen, 
+        String NumeroCuentaDestino,
+        Double MontoATransferir) {
+
+            // Paso 1 encontrar la cuenta de origen
+            // Paso 2 validar si el monto esta disponible
+            // Paso 3 deducir el monto a transferir
+
+            // Paso 4 encontrar la cuenta de destino
+            // Paso 5 sumar el monto.
+
+            // Paso 6 motras los transferencia.
+
     }
 }
